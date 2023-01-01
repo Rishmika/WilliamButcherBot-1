@@ -115,11 +115,17 @@ home_keyboard_pm = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
+                text="☃️─────────────────────☃️",
+                url=f"http://t.me/{BOT_USERNAME}?startgroup=new",
+            )
+        ],
+        [
+            InlineKeyboardButton(
                 text="Commands ❓", callback_data="bot_commands"
             ),
             InlineKeyboardButton(
-                text="Repo 🛠",
-                url="https://github.com/thehamkercat/WilliamButcherBot",
+                text="</> ємσ вσт ∂єνσℓσρєʀѕ",
+                url="t.me/EmoBotDevolopers",
             ),
         ],
         [
@@ -128,7 +134,7 @@ home_keyboard_pm = InlineKeyboardMarkup(
                 callback_data="stats_callback",
             ),
             InlineKeyboardButton(
-                text="Support 👨", url="http://t.me/WBBSupport"
+                text="Support 👨", url="http://t.me/EmoBotSupport"
             ),
         ],
         [
@@ -150,24 +156,36 @@ keyboard = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                text="Help ❓",
-                url=f"t.me/{BOT_USERNAME}?start=help",
+                text="☃️─────────────────────☃️",
+                url=f"http://t.me/{BOT_USERNAME}?startgroup=new",
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="Commands ❓", callback_data="bot_commands"
             ),
             InlineKeyboardButton(
-                text="Repo 🛠",
-                url="https://github.com/thehamkercat/WilliamButcherBot",
+                text="</> ємσ вσт ∂єνσℓσρєʀѕ",
+                url="t.me/EmoBotDevolopers",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="System Stats 💻",
+                text="System Stats 🖥",
                 callback_data="stats_callback",
             ),
-            InlineKeyboardButton(text="Support 👨", url="t.me/WBBSupport"),
+            InlineKeyboardButton(
+                text="Support 👨", url="http://t.me/EmoBotSupport"
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text="Add Me To Your Group 🎉",
+                url=f"http://t.me/{BOT_USERNAME}?startgroup=new",
+            )
         ],
     ]
 )
-
 
 @app.on_message(~filters.edited & filters.command("start"))
 async def start(_, message):
@@ -212,7 +230,7 @@ async def help_command(_, message):
                     [
                         [
                             InlineKeyboardButton(
-                                text="Click here",
+                                text="☘️Click here",
                                 url=f"t.me/{BOT_USERNAME}?start=help_{name}",
                             )
                         ],
